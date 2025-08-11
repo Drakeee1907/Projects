@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switzerland</title>
+</head>
+<body>
+    <div class="flag">
+        <div class="r1"></div>
+        <div class="r2">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+        </div>
+        <div class="r3">
+            <div class="C1"></div>
+            <div class="C2"></div>
+            <div class="C3"></div>
+            <div class="C4"></div>
+            <div class="C5"></div>
+        </div>
+        <div class="r4">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+        </div>
+        <div class="r5"></div>
+    </div>
+</body>
+    <style>
+        :root {
+            --white: #ffffff;
+            --red: #fb1717;
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        .flag{
+            width: 200px;
+            height: 200px;
+            background-color: var(--red);
+        }
+        .r1,.r2,.r3,.r4,.r5{
+            width: 100%;
+            height: 20%;   
+        }
+        .r2,.r3,.r4{
+            display: flex;
+        }
+        .c1,.c2,.c3,.c4,.c5,.C1,.C2,.C3,.C4,.C5{
+            width: 20%;
+            height: 100%;
+        }
+        .c3,.C2,.C3,.C4{
+            background-color: var(--white);
+        }
+    </style>
+</html>
