@@ -1,0 +1,139 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.Main_Board{
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.white_outer{
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px ;
+    border-style: solid;
+    border-color: black;
+}
+.white_inner{
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: 1px ;
+    border-style: solid;
+    border-color: black;
+}
+.black_outer{
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.black_inner{
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+     border: 1px ;
+    border-style: solid;
+    border-color: white;
+}
+.blue_outer{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px ;
+    border-style: solid;
+    border-color: white;
+}
+.blue_inner{
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px ;
+    border-style: solid;
+    border-color: black;
+}
+.red_outer{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px ;
+    border-style: solid;
+    border-color: black;
+}
+.red_inner{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px ;
+    border-style: solid;
+    border-color: black;
+}
+.yellow_outer{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px ;
+    border-style: solid;
+    border-color: black;
+}
+.yellow_inner{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px ;
+    border-style: solid;
+    border-color: black;
+}              
+h1{
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
