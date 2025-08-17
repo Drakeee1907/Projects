@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube</title>
+  <style>
+    :root {
+      --MBG: rgb(47, 44, 44);
+      --BG: rgb(30, 26, 26);
+      --text: rgb(189, 184, 184);
+      --accent: rgb(255, 70, 70);
+    }
+
+    body {
+      background-color: var(--MBG);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 800px;   /* same margin box */
+      margin: 0 auto;     /* centers everything */
+      padding: 10px;
+    }
+
+    .VIDEO {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;          /* fits container */
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 6px;
+    }
+
+    h4 {
+      color: var(--text);
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .cha {
+      background-color: var(--BG);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 6px;
+    }
+
+    .logo {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .channel-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .channel-info h2 {
+      color: var(--text);
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .sub {
+      color: var(--text);
+      font-size: 12px;
+      margin: 2px 0 0;
+    }
+
+    .about {
+      margin-top: 15px;
+      background-color: var(--BG);
+      color: var(--text);
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      line-height: 1.4;
+      font-size: 13px;
+    }
+
+    .about h3 {
+      color: var(--accent);
+      margin-bottom: 3px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="VIDEO">
+      <iframe 
+        src="https://skfiziks.blogspot.com" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h4>Lol Physics</h4>
+
+    <div class="cha">
+      <img src="./img/logo.jpeg" alt="logo" class="logo">
+      <div class="channel-info">
+        <h2>Lol Physics</h2>
+        <p class="sub">1.2 million subscribers</p>
+      </div>
+    </div>
+
+    <div class="about">
+      <h3>About this video</h3>
+      <p>A description about this video.</p>
+
+      <h3>About this channel</h3>
+      <p>A description about this channel.</p>
+    </div>
+  </div>
+</body>
+</html>
