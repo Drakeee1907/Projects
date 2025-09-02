@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display</title>
+</head>
+<body>
+
+  <form onsubmit="return false;">
+    <input type="text" id="num1" placeholder="Enter your name">
+    <button type="button" onclick="greet()">Submit</button>
+  </form>
+    <p id="message"></p>
+  <script>
+    function greet(){
+        var name = document.getElementById("num1").value;
+        var result = "Hello, " + name + "!";
+        document.getElementById("message").innerText = result;
+    }
+  </script>
+</body>
+</html>
