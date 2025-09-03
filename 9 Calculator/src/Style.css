@@ -1,0 +1,85 @@
+:root {
+      --background: black;
+      --reset: #625F63;
+      --btn-color: #333;
+      --btn-text: white;
+    }
+
+    body {
+      background-color: var(--background);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .cal {
+      width: 320px;
+      background-color: var(--reset);
+      padding: 10px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .Display {
+      width: 100%;
+      height: 90px;
+      background-color: var(--background);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 5px 15px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    #textarea {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 32px;
+      text-align: right;
+      outline: none;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    #textarea::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+
+    /* Grid for buttons */
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      width: 100%;
+      height: 65px;
+      border-radius: 50%;
+      border: none;
+      background-color: var(--btn-color);
+      color: var(--btn-text);
+      font-size: 24px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .equal {
+      background-color: orange;
+      color: white;
+    }
