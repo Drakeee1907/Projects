@@ -1,0 +1,77 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    width: 340px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px
+      
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.Profile{
+    width: 100px;
+    height: 100px;
+}
+.Start{
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.end{
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.mid{
+    width: 40%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile{
+    padding-top: 18.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Role{
+    color: grey;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.call{
+    padding: 10px 20px;
+    background-color: rgb(37, 242, 6);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
