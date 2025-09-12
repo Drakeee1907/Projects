@@ -1,205 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio Hero — Example</title>
-  <style>
-    :root{
-      --bg1: #0f172a;
-      --bg2: #071033;
-      --accent1: #8b5cf6;
-      --accent2: #06b6d4;
-      --muted: rgba(255,255,255,0.75);
-      --glass: rgba(255,255,255,0.06);
-      --radius: 14px;
-      --maxw: 1100px;
-      --ease: cubic-bezier(.2,.9,.3,1);
-    }
-
-    /* basic reset */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(1200px 600px at 10% 20%, rgba(139,92,246,0.12), transparent),
-                  radial-gradient(900px 500px at 90% 80%, rgba(6,182,212,0.08), transparent),
-                  linear-gradient(180deg,var(--bg1),var(--bg2));
-      color: #fff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:48px 20px;
-    }
-
-    .container{
-      width:100%;
-      max-width: var(--maxw);
-      display:grid;
-      grid-template-columns: 1fr 420px;
-      gap:32px;
-      align-items:center;
-    }
-
-    /* decorative animated gradient */
-    .bg-shift{
-      position:absolute;
-      inset:0;
-      z-index:0;
-      pointer-events:none;
-      background: conic-gradient(from 120deg at 50% 50%, rgba(139,92,246,0.12), rgba(6,182,212,0.08), rgba(139,92,246,0.12));
-      filter: blur(60px) saturate(120%);
-      opacity:0.8;
-      animation: rotate 18s linear infinite;
-      mix-blend-mode: screen;
-    }
-    @keyframes rotate { from{ transform: rotate(0deg)} to{ transform: rotate(360deg)} }
-
-    /* hero content */
-    .hero{
-      position:relative;
-      z-index:2;
-      padding:28px;
-    }
-    h1{
-      margin:0 0 12px 0;
-      font-size: clamp(28px, 4.6vw, 48px);
-      line-height:1.02;
-      letter-spacing:-0.02em;
-      font-weight:700;
-      color: white;
-    }
-    p.lead{
-      margin:0 0 20px 0;
-      color:var(--muted);
-      font-size: clamp(15px, 2.4vw, 18px);
-      max-width: 70ch;
-    }
-
-    .bio-card{
-      margin-top:20px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-      border-radius: var(--radius);
-      padding:18px;
-      box-shadow: 0 6px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-      backdrop-filter: blur(8px) saturate(120%);
-      display:flex;
-      gap:14px;
-      align-items:center;
-      max-width: 54ch;
-    }
-    .avatar{
-      flex:0 0 64px;
-      width:64px;
-      height:64px;
-      border-radius:12px;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      display:grid;
-      place-items:center;
-      font-weight:700;
-      font-size:20px;
-      color:white;
-      box-shadow: 0 6px 18px rgba(11,15,30,0.6);
-    }
-    .bio-text small{ display:block; color:var(--muted); font-size:13px;}
-    .bio-text strong{ display:block; font-weight:600; margin-top:6px; color:#fff; }
-
-    /* CTA buttons */
-    .ctas{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 16px;
-      border-radius:12px;
-      font-weight:600;
-      text-decoration:none;
-      cursor:pointer;
-      transition: transform .18s var(--ease), box-shadow .18s var(--ease);
-      border:1px solid rgba(255,255,255,0.06);
-      background:var(--glass);
-      color:var(--muted);
-      box-shadow: 0 6px 18px rgba(2,6,23,0.45);
-    }
-    .btn:focus{ outline:3px solid rgba(139,92,246,0.18); outline-offset:3px; }
-    .btn:hover{ transform: translateY(-4px); box-shadow: 0 14px 36px rgba(2,6,23,0.6); color:white }
-
-    .btn.primary{
-      background: linear-gradient(90deg,var(--accent1), var(--accent2));
-      color: white;
-      border: none;
-      box-shadow: 0 10px 30px rgba(6,182,212,0.12);
-    }
-
-    /* right column: social / skills card */
-    .side{
-      position:relative;
-      z-index:2;
-      align-self:start;
-    }
-    .panel{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:12px;
-      padding:18px;
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-      backdrop-filter: blur(6px);
-      color:var(--muted);
-    }
-    .skills{ display:flex; gap:8px; flex-wrap:wrap; margin-top:12px }
-    .tag{ padding:6px 10px; border-radius:999px; background: rgba(255,255,255,0.03); font-size:13px; color:var(--muted); border:1px solid rgba(255,255,255,0.03)}
-
-    /* responsive */
-    @media (max-width:980px){
-      .container{ grid-template-columns:1fr; }
-      .side{ order:2 }
-    }
-
-    /* subtle entrance animation */
-    .hero, .panel{ transform: translateY(6px); opacity:0; animation: fadeUp .6s cubic-bezier(.2,.9,.3,1) forwards; }
-    .panel{ animation-delay:.12s }
-    @keyframes fadeUp{ to { transform:none; opacity:1 } }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Portfolio Hero</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-shift" aria-hidden="true"></div>
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>
+        Hi, I’m Priya — <br />
+        I craft clean <span class="gradient-text">web experiences.</span>
+      </h1>
+      <p>
+        I design and build fast, accessible interfaces with a focus on clarity.
+        I enjoy turning ideas into polished products.
+      </p>
 
-  <main class="container" role="main" aria-labelledby="hero-title">
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">Hi, I’m Priya — I craft delightful web experiences.</h1>
-      <p class="lead">I design and build fast, accessible interfaces with a focus on clarity and motion. I enjoy turning ideas into polished products, from prototypes to production-ready sites.</p>
-
-      <div class="bio-card" aria-label="Short bio">
-        <div class="avatar" aria-hidden="true">P</div>
-        <div class="bio-text">
-          <small>Frontend developer &amp; designer</small>
-          <strong>Specializes in React, CSS, and performance-focused UI</strong>
-        </div>
+      <div class="buttons">
+        <button class="primary">View my work</button>
+        <button class="secondary">Get in touch</button>
       </div>
+    </div>
 
-      <div class="ctas" role="group" aria-label="Call to actions">
-        <a class="btn primary" href="#work">View my work</a>
-        <a class="btn" href="#contact">Get in touch</a>
+    <!-- Quick Facts Section -->
+    <div class="facts">
+      <h2>Quick facts</h2>
+      <p>Based in Bangalore · Open to freelance & contract work</p>
+
+      <div class="skills">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Accessibility</span>
       </div>
-    </section>
-
-    <aside class="side" aria-label="Sidebar with quick info">
-      <div class="panel" role="region" aria-labelledby="panel-title">
-        <h3 id="panel-title" style="margin:0 0 8px 0; color:#fff">Quick facts</h3>
-        <div style="font-size:14px; color:var(--muted)">Based in Bangalore · Open to freelance &amp; contract work</div>
-
-        <div style="margin-top:12px; font-size:13px; color:var(--muted)">Skills</div>
-        <div class="skills" aria-hidden="false">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">React</span>
-          <span class="tag">Accessibility</span>
-        </div>
-      </div>
-    </aside>
-  </main>
+    </div>
+  </div>
 </body>
 </html>
