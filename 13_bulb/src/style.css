@@ -1,0 +1,56 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #f5d94d;
+    font-family: Arial, sans-serif;
+}
+.bulb_body{
+    width : 200px;
+    height : 300px;
+    border: 1px solid black;
+    background-color: white;
+    
+}
+.bulb{
+    width : 150px;
+    height : 200px;
+    
+    margin: auto;
+    
+}
+.bulb_body1{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bulb_body2{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.btn{
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+.bulb:hover{
+    
+    transform: scale(1.2);
+    transition: 0.3s;
+}
